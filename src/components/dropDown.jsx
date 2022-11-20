@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import { useState } from "react";
 import { useOutsideClick } from "./useOutsideClick";
+import  CreateUniqueList  from "./createUniqueList";
 
 const DropDown = () => {
-   
+
   const [students, setStudents] = useState(["Fariba", "Farina", "Roniya"]);
   const [showUl, setShowUl] = useState(false);
 
@@ -27,7 +28,6 @@ const DropDown = () => {
 
         <div class="relative ">
           <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-
             <svg
               xmlns="http://www.w3.org/2000/svg "
               fill="none "
@@ -66,6 +66,10 @@ const DropDown = () => {
             );
           })}
         </ul>
+      </div>
+
+      <div className="mt-48 ml-2 font-medium p-4 border-gray-200 border-1 w-1/2 sm:w-1/3">
+        UniqueListResult : {CreateUniqueList([1, 2, 3, 3, 3, 4, 4, 5, 5, 6, 7])}
       </div>
     </>
   );
