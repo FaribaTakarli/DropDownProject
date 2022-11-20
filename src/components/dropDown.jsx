@@ -77,7 +77,7 @@ const DropDown = () => {
   function AddStudent(event) {
     if (event.key === "Enter") {
       var allStudents = [...students];
-      allStudents.push(event.target.value);
+      allStudents.push(ref.current.value);
       setStudents(allStudents);
       ref.current.value = "";
 
